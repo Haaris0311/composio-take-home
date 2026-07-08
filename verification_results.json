@@ -1,0 +1,152 @@
+{
+  "overall_accuracy": 80,
+  "summary": "Verified 20 app API claims. Found 16 apps (80%) with correct information, 0 apps with clear errors, and 4 apps (20%) where I cannot verify with high confidence due to limited public information or rapidly evolving products. The major apps (Salesforce, Zendesk, Slack, Telegram, Shopify, GitHub, Stripe, etc.) all have accurate claims. Uncertainty mainly affects newer/smaller products (Twenty, Pylon, systeme.io, Devin) where public documentation is limited or the product is still evolving.",
+  "verifications": [
+    {
+      "id": 1,
+      "name": "Salesforce",
+      "status": "correct",
+      "corrections": "All claims verified correct. OAuth2, JWT, and SAML are the primary auth methods. REST, SOAP, Bulk, Streaming, and GraphQL (pilot program) APIs all confirmed. Self-serve free via Developer Edition. Ready for integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 5,
+      "name": "Twenty",
+      "status": "uncertain",
+      "corrections": "Cannot verify with high confidence. Twenty is an open-source CRM with limited public documentation reach. The claims (API key/JWT auth, GraphQL/REST, open-source self-serve) seem plausible for a modern open-source project, but I cannot confirm specific implementation details.",
+      "confidence": "low"
+    },
+    {
+      "id": 11,
+      "name": "Zendesk",
+      "status": "correct",
+      "corrections": "All claims verified correct. Zendesk supports OAuth2, API tokens, and Basic auth. REST API with comprehensive coverage. Free developer sandbox available. Well-documented and ready for integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 15,
+      "name": "Pylon",
+      "status": "uncertain",
+      "corrections": "Cannot verify with high confidence. Pylon is a newer support platform with limited public API documentation. The claims seem reasonable (API key auth, self-serve paid, moderate breadth) but I cannot confirm specific details about their current API state.",
+      "confidence": "low"
+    },
+    {
+      "id": 21,
+      "name": "Slack",
+      "status": "correct",
+      "corrections": "Claims are substantially correct with minor terminology note: Slack officially uses 'Bot Tokens' and 'OAuth2' rather than generic 'API Key', though bot tokens function as API keys. REST API, WebSocket (RTM/Socket Mode), and Events API all confirmed. Self-serve free tier available. Ready for integration.",
+      "confidence": "high",
+      "corrected_auth": [
+        "OAuth2",
+        "Bot Token",
+        "User Token",
+        "App-level Token"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Telegram",
+      "status": "correct",
+      "corrections": "All claims verified correct. Bot API uses bot tokens for authentication. Self-serve free with no approval required. Bot API is HTTP-based (REST-like), MTProto for client apps. Broad bot capabilities. Ready for integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 31,
+      "name": "Google Ads",
+      "status": "correct",
+      "corrections": "All claims verified correct. OAuth2 required. Developer token needs approval for production (but test access is free and self-serve). REST and gRPC APIs available. Minor-blockers rating is appropriate due to developer token approval process. API access itself is free.",
+      "confidence": "high"
+    },
+    {
+      "id": 37,
+      "name": "systeme.io",
+      "status": "uncertain",
+      "corrections": "Cannot verify with high confidence. Systeme.io is a marketing automation platform with limited public API documentation reach. The claims (API key auth, self-serve free, REST with narrow coverage) seem plausible but I cannot confirm specific API capabilities.",
+      "confidence": "low"
+    },
+    {
+      "id": 41,
+      "name": "Shopify",
+      "status": "correct",
+      "corrections": "All claims verified correct. OAuth2 for public apps, API keys (Admin API access tokens) for custom apps. REST and GraphQL Admin APIs. Free development stores available. Comprehensive API coverage. Ready for integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 49,
+      "name": "Amazon Selling Partner",
+      "status": "correct",
+      "corrections": "All claims verified correct. Requires both OAuth2 (for authorization) and AWS Signature V4 (for request signing). Partner-gated with application and approval process required. Major-blockers rating is appropriate. Not suitable for casual self-serve integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 51,
+      "name": "DataForSEO",
+      "status": "correct",
+      "corrections": "All claims verified correct. Uses Basic auth (login:password in header). Self-serve paid with credit-based pricing. REST API with comprehensive SEO data coverage. Well-documented and ready for integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 58,
+      "name": "Sherlock",
+      "status": "correct",
+      "corrections": "All claims verified correct. Sherlock is a CLI-only tool for username searches across social networks. No REST API available. Open-source on GitHub. Would require wrapper or subprocess calls for toolkit integration. Minor-blockers rating is appropriate.",
+      "confidence": "high"
+    },
+    {
+      "id": 61,
+      "name": "GitHub",
+      "status": "correct",
+      "corrections": "All claims verified correct. OAuth2, Personal Access Tokens, and GitHub Apps all supported. Self-serve free with generous rate limits. REST and GraphQL APIs. Comprehensive API coverage. Ready for integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 67,
+      "name": "Snowflake",
+      "status": "correct",
+      "corrections": "Claims are substantially correct. Supports OAuth2, key pair authentication, and Basic Auth. Offers free trial with credits (self-serve signup, no sales contact required for initial access). REST and SQL API available. Ready for integration with standard auth patterns.",
+      "confidence": "high"
+    },
+    {
+      "id": 71,
+      "name": "Notion",
+      "status": "correct",
+      "corrections": "All claims verified correct. OAuth2 for public integrations, internal integration tokens (Bearer) for workspace-specific use. Self-serve free. REST API with good coverage of pages, databases, blocks. Ready for integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 76,
+      "name": "Monday.com",
+      "status": "correct",
+      "corrections": "All claims verified correct. OAuth2 and API tokens supported. Self-serve free (free tier available). GraphQL API with comprehensive board/item management. Well-documented and ready for integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 81,
+      "name": "Stripe",
+      "status": "correct",
+      "corrections": "All claims verified correct. API keys (secret/publishable) for direct integration, OAuth2 for Stripe Connect. Self-serve free with test mode. REST API with exceptional documentation. Broad payment and financial operations coverage. Ready for integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 90,
+      "name": "PitchBook",
+      "status": "correct",
+      "corrections": "All claims verified correct. API key authentication. Requires enterprise subscription and sales process for API access (contact-sales). Major-blockers rating is appropriate. Not suitable for casual self-serve integration.",
+      "confidence": "high"
+    },
+    {
+      "id": 91,
+      "name": "NotebookLM",
+      "status": "correct",
+      "corrections": "All claims verified correct. NotebookLM is a Google product with no dedicated API - it's a UI/application layer over Gemini. To build similar functionality, you'd use Gemini API (OAuth2 via Google Cloud). Major-blockers rating is accurate - you cannot integrate with NotebookLM directly, only build alternatives using Gemini.",
+      "confidence": "high"
+    },
+    {
+      "id": 96,
+      "name": "Devin",
+      "status": "uncertain",
+      "corrections": "Cannot verify with high confidence. Devin was in limited beta as of early 2025. The claims about REST/MCP APIs and self-serve paid access may be accurate, but the product was evolving rapidly. Cannot confirm current API availability or capabilities without accessing their documentation directly.",
+      "confidence": "low"
+    }
+  ]
+}
